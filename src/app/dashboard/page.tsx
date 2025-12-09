@@ -21,20 +21,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { MapPlaceholder } from '@/components/map-placeholder';
-import {
-  Bar,
-  BarChart,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from 'recharts';
+import dynamic from 'next/dynamic';
 
-const binData = [
-  { name: 'Cheio', value: 8, fill: 'hsl(var(--destructive))' },
-  { name: 'Médio', value: 25, fill: 'hsl(var(--chart-3))' },
-  { name: 'Vazio', value: 67, fill: 'hsl(var(--accent))' },
-];
+const WasteBinChart = dynamic(() => import('@/components/waste-bin-chart'), { ssr: false });
 
 export default function DashboardPage() {
   return (
@@ -124,14 +113,7 @@ export default function DashboardPage() {
             <CardDescription>Estado da rede de contentores</CardDescription>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={120}>
-              <BarChart data={binData} layout="vertical" margin={{ left: -10 }}>
-                <XAxis type="number" hide />
-                <YAxis type="category" dataKey="name" hide />
-                 <Tooltip cursor={{fill: 'hsl(var(--muted))'}} contentStyle={{backgroundColor: 'hsl(var(--card))', borderRadius: 'var(--radius)'}}/>
-                <Bar dataKey="value" radius={[0, 4, 4, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
+            <WasteBinChart />
             <Button asChild variant="outline" className="w-full mt-4">
               <Link href="/dashboard/waste-bins">Ver Mapa de Contentores <ArrowRight className="ml-2 h-4 w-4"/></Link>
             </Button>
@@ -178,7 +160,7 @@ export default function DashboardPage() {
               <span>Ecoparques Solares</span>
             </CardTitle>
              <CardDescription>Energia e vagas disponíveis</CardDescription>
-          </HA>
+          </CardHeader>
           <CardContent>
              <p className="text-sm text-muted-foreground">Energia Total Gerada Hoje</p>
             <p className="text-4xl font-bold">42.5 <span className="text-lg font-normal text-muted-foreground">kWh</span></p>

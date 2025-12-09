@@ -7,6 +7,7 @@ import {
   Trees,
   Route,
   User,
+  Settings,
 } from 'lucide-react';
 
 export const NAV_ITEMS = [
@@ -22,4 +23,5 @@ export const NAV_ITEMS = [
     label: 'Rotas',
   },
   { href: '/dashboard/profile', icon: User, label: 'Perfil' },
+  { href: '/dashboard/settings', icon: Settings, label: 'Definições'},
 ];

@@ -45,7 +45,7 @@ export default function EcoparkPage() {
                 <SelectContent>
                   <SelectItem value="all">Todos</SelectItem>
                   <SelectItem value="available">Com Vagas Livres</SelectItem>
-                </Content>
+                </SelectContent>
               </Select>
             </CardContent>
           </Card>

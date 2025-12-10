@@ -1,10 +1,10 @@
 
 'use client';
-import { useEffect } from 'react';
-import { MapContainer, TileLayer, Polyline, Marker, Tooltip, useMap } from 'react-leaflet';
+
+import { useEffect, useRef } from 'react';
 import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import { cn } from '@/lib/utils';
-import { BusSimulator, routePolyline } from './bus-simulator';
 
 // Data extracted from maps.html
 const stops = [
@@ -44,44 +44,114 @@ const stops = [
     { nome: "Avenida João da Cruz", lat: 41.807384, lng: -6.758440 }
 ].map(p => ({ name: p.nome, coord: [p.lat, p.lng] as [number, number] }));
 
-export const stopIcon = new L.Icon({
-    iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-    iconSize: [22, 22],
-    iconAnchor: [11, 11],
-});
+const routePolyline: [number, number][] = stops.map(s => s.coord);
+if (routePolyline.length > 0) {
+    routePolyline.push(routePolyline[0]); // Close the loop
+}
 
-
-const MapResizer = () => {
-    const map = useMap();
-    useEffect(() => {
-        if (routePolyline.length > 1) {
-            const bounds = L.latLngBounds(routePolyline);
-            map.fitBounds(bounds, { padding: [40, 40] });
-        }
-    }, [map]);
-    return null;
+// Utility functions
+function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
+function interpolateLatLng(a: [number, number], b: [number, number], t: number): [number, number] {
+    return [lerp(a[0], b[0], t), lerp(a[1], b[1], t)];
+}
+function segmentDistanceMeters(a: [number, number], b: [number, number]) {
+    const R = 6371000;
+    const toRad = (d: number) => d * Math.PI / 180;
+    const dLat = toRad(b[0] - a[0]);
+    const dLon = toRad(b[1] - a[1]);
+    const lat1 = toRad(a[0]);
+    const lat2 = toRad(b[0]);
+    const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h));
 }
 
 export default function BusMap({ className }: { className?: string }) {
-    return (
-        <MapContainer
-            center={[41.8061, -6.7569]}
-            zoom={15}
-            scrollWheelZoom={false}
-            className={cn("h-full w-full", className)}
-        >
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <Polyline positions={routePolyline} color="blue" weight={4} opacity={0.8} />
-            {stops.map(stop => (
-                <Marker key={stop.name} position={stop.coord} icon={stopIcon}>
-                    <Tooltip>{stop.name}</Tooltip>
-                </Marker>
-            ))}
-            <BusSimulator route={routePolyline} />
-            <MapResizer />
-        </MapContainer>
-    );
+    const mapContainerRef = useRef<HTMLDivElement>(null);
+    const mapRef = useRef<L.Map | null>(null);
+
+    useEffect(() => {
+        if (mapRef.current || !mapContainerRef.current) return;
+
+        // Initialize map
+        const map = L.map(mapContainerRef.current).setView([41.8061, -6.7569], 15);
+        mapRef.current = map;
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Icons
+        const busIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/3448/3448339.png',
+            iconSize: [34, 34], iconAnchor: [17, 17],
+        });
+        const stopIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+            iconSize: [22, 22], iconAnchor: [11, 11],
+        });
+
+        // Draw route and stops
+        const routeLine = L.polyline(routePolyline, { weight: 4, opacity: .8, color: 'blue' }).addTo(map);
+        map.fitBounds(routeLine.getBounds(), { padding: [40,40] });
+        stops.forEach(s => L.marker(s.coord, { icon: stopIcon }).addTo(map).bindTooltip(s.name));
+
+        // Bus simulation
+        const busState = { seg: 0, t: 0, speed: 6.11 };
+        const busMarker = L.marker(routePolyline[0], { icon: busIcon }).addTo(map);
+        const segLens = routePolyline.length > 1 ? routePolyline.slice(0, -1).map((p, i) => segmentDistanceMeters(p, routePolyline[i + 1]!)) : [];
+
+        let lastTime = performance.now();
+        let animationFrameId: number;
+
+        const animate = (now: number) => {
+            const dt = (now - lastTime) / 1000;
+            lastTime = now;
+
+            let advance = busState.speed * dt; // meters
+
+            while (advance > 0 && segLens.length > 0) {
+                const currentSeg = busState.seg % segLens.length;
+                const segLen = segLens[currentSeg] || 0;
+                if (segLen === 0) {
+                    busState.seg = (busState.seg + 1) % (routePolyline.length -1);
+                    busState.t = 0;
+                    continue;
+                }
+                const rem = (1 - busState.t) * segLen;
+
+                if (advance < rem) {
+                    busState.t += advance / segLen;
+                    advance = 0;
+                } else {
+                    advance -= rem;
+                    busState.seg = (busState.seg + 1) % (routePolyline.length - 1);
+                    busState.t = 0;
+                }
+            }
+            
+            const currentPoint = routePolyline[busState.seg];
+            const nextPoint = routePolyline[busState.seg + 1];
+
+            if (currentPoint && nextPoint) {
+                 const newPos = interpolateLatLng(currentPoint, nextPoint, busState.t);
+                 busMarker.setLatLng(newPos);
+            }
+
+            animationFrameId = requestAnimationFrame(animate);
+        };
+
+        animationFrameId = requestAnimationFrame(animate);
+
+        // Cleanup function
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+            if (map) {
+                map.remove();
+                mapRef.current = null;
+            }
+        };
+
+    }, []); // Empty dependency array ensures this runs only once
+
+    return <div ref={mapContainerRef} className={cn("h-full w-full", className)}></div>;
 }

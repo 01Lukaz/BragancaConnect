@@ -44,7 +44,7 @@ const getStatusColor = (status: string) => {
   }
 };
 
-export default function BusLineDetailPage({ params }: PageProps<{ id: string }>) {
+export default function BusLineDetailPage() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {

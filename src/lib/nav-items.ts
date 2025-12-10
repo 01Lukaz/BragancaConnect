@@ -15,7 +15,7 @@ import {
 export const NAV_ITEMS = [
   { href: '/dashboard', icon: Home, label: 'Início' },
   { href: '/dashboard/buses', icon: Bus, label: 'Autocarros' },
-  { href: '/dashboard/waste-bins', icon: Trash2, label: 'Contentores' },
+  { href: '/dashboard/waste-bins', icon: Trash2, label: 'Contentores Orgânicos' },
   { href: '/dashboard/chargers', icon: BatteryCharging, label: 'Carregadores' },
   { href: '/dashboard/composting', icon: Leaf, label: 'Compostagem' },
   { href: '/dashboard/ecopark', icon: Trees, label: 'Ecoparques' },

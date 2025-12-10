@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/card';
 import { Trash2, Circle, Route, Clock, AlertTriangle } from 'lucide-react';
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const WasteBinRouteMap = dynamic(() => import('@/components/waste-bin-route-map'), { ssr: false });
@@ -39,16 +39,14 @@ const getStatusColor = (status: string) => {
       return 'hsl(var(--muted))';
   }
 };
+function OptimizedRoutePageContent() {
+  const [isClient, setIsClient] = useState(false);
+  const searchParams = useSearchParams();
+  const highlight = searchParams?.get ? searchParams.get('highlight') : null;
 
-
-export default function OptimizedRoutePage() {
-    const [isClient, setIsClient] = useState(false);
-    const searchParams = useSearchParams();
-    const highlight = searchParams?.get ? searchParams.get('highlight') : null;
-
-      useEffect(() => {
-          setIsClient(true);
-      }, []);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div>
@@ -114,5 +112,13 @@ export default function OptimizedRoutePage() {
         </CardContent>
       </Card>
     </div>
+  );
+}
+
+export default function OptimizedRoutePage() {
+  return (
+    <Suspense fallback={<div>Carregando rota otimizada...</div>}>
+      <OptimizedRoutePageContent />
+    </Suspense>
   );
 }

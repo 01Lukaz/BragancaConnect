@@ -1,6 +1,7 @@
 
 'use client';
 
+import { PageProps } from 'next';
 import { PageTitle } from '@/components/layout/page-title';
 import { Button } from '@/components/ui/button';
 import {
@@ -43,7 +44,7 @@ const getStatusColor = (status: string) => {
   }
 };
 
-export default function BusLineDetailPage({ params }: { params: { id: string } }) {
+export default function BusLineDetailPage({ params }: PageProps<{ id: string }>) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {

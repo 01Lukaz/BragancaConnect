@@ -1,6 +1,6 @@
 {
   "functions": {
-    "src/ai/genkit.ts": {
+    ".genkit/functions/**/*.js": {
       "memory": 1024
     }
   }

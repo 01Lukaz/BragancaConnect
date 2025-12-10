@@ -2,7 +2,6 @@
 'use client';
 
 import { PageTitle } from '@/components/layout/page-title';
-import { MapPlaceholder } from '@/components/map-placeholder';
 import {
   Card,
   CardContent,
@@ -10,13 +9,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Trash2, Circle } from 'lucide-react';
+import { Circle } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
 
-const organicBins = [
-  { id: 'bin-003', location: 'Avenida Sá Carneiro', level: 25, status: 'Vazio' },
-  { id: 'bin-006', location: 'Parque dos Tupis', level: 55, status: 'Médio' },
-  { id: 'bin-007', location: 'Escola Superior de Educação', level: 90, status: 'Cheio' },
-];
+const WasteBinMap = dynamic(() => import('@/components/waste-bin-map'), { ssr: false });
 
 const getStatusColor = (status: string) => {
   switch (status) {
@@ -33,6 +30,12 @@ const getStatusColor = (status: string) => {
 
 
 export default function WasteBinsPage() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div>
       <PageTitle title="Contentores Orgânicos" />
@@ -51,7 +54,9 @@ export default function WasteBinsPage() {
           </div>
         </CardHeader>
         <CardContent className="p-0">
-          <MapPlaceholder className="aspect-square md:aspect-video h-auto max-h-[70vh] min-h-[400px]" />
+          <div className="aspect-square md:aspect-video h-auto max-h-[70vh] min-h-[400px]">
+            {isClient && <WasteBinMap />}
+          </div>
         </CardContent>
       </Card>
     </div>

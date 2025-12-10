@@ -17,19 +17,19 @@ const profiles = [
     type: 'Cidadão',
     description: 'Aceda aos serviços da cidade como residente.',
     icon: User,
-    href: '/login',
+    href: '/dashboard',
   },
   {
     type: 'Cooperado',
     description: 'Acesso para parceiros e empresas da rede.',
     icon: Building,
-    href: '/login/cooperado',
+    href: '/dashboard-coop',
   },
   {
     type: 'Nordeste',
     description: 'Explore os dados e serviços da região.',
     icon: Landmark,
-    href: '/login/nordeste',
+    href: '/dashboard-nordeste',
   },
 ];
 

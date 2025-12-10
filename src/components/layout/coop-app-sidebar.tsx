@@ -75,7 +75,7 @@ export function CoopAppSidebar() {
             </SidebarMenuItem>
              <SidebarMenuItem>
                 <SidebarMenuButton asChild tooltip="Sair">
-                  <Link href="/login/cooperado">
+                  <Link href="/">
                     <LogOut className="h-5 w-5 text-destructive" />
                     <span className="text-destructive">Sair</span>
                   </Link>

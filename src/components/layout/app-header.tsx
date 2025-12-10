@@ -73,7 +73,7 @@ export function AppHeader() {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-                <Link href="/login" className='text-destructive'>Sair</Link>
+                <Link href="/" className='text-destructive'>Sair</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

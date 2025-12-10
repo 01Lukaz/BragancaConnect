@@ -63,7 +63,7 @@ export function NordesteAppSidebar() {
         <SidebarMenu>
            <SidebarMenuItem>
                 <SidebarMenuButton asChild tooltip="Sair">
-                  <Link href="/login/nordeste">
+                  <Link href="/">
                     <LogOut className="h-5 w-5 text-destructive" />
                     <span className="text-destructive">Sair</span>
                   </Link>

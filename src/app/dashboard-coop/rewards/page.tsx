@@ -58,11 +58,6 @@ export default function RewardsPage() {
                         <CardContent className="flex-1">
                             <p className="text-3xl font-bold text-primary">{reward.points} PONTOS</p>
                         </CardContent>
-                        <CardFooter>
-                            <Button className="w-full h-12 text-lg">
-                                Trocar <ArrowRight className="ml-2" />
-                            </Button>
-                        </CardFooter>
                     </Card>
                 )
             })}

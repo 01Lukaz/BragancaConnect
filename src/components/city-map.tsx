@@ -77,5 +77,13 @@ export default function CityMap({ className, satellite = true }: { className?: s
     };
   }, []);
 
-  return <div ref={mapContainerRef} className={cn('w-full h-[420px] rounded-lg overflow-hidden', className)} />;
+  return (
+    <div
+      ref={mapContainerRef}
+      className={cn(
+        'w-full h-[280px] sm:h-[360px] md:h-[420px] rounded-lg overflow-hidden',
+        className,
+      )}
+    />
+  );
 }

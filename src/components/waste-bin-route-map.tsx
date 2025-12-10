@@ -149,5 +149,11 @@ export default function WasteBinRouteMap({ className, highlightName, bins }: { c
 
     }, []); 
 
-    return <div ref={mapContainerRef} className={cn("h-full w-full rounded-b-lg", className)} style={{ zIndex: 0 }}></div>;
+    return (
+        <div
+            ref={mapContainerRef}
+            className={cn("w-full rounded-b-lg min-h-[280px] sm:min-h-[360px]", className)}
+            style={{ zIndex: 0 }}
+        ></div>
+    );
 }

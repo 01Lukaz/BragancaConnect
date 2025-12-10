@@ -166,7 +166,11 @@ export default function BusMap({ className, onStopChange, routeKey = 'U1', onBus
 
     return (
         <div className="w-full h-full relative">
-            <div ref={mapContainerRef} className={cn("h-full w-full rounded-b-lg", className)} style={{ zIndex: 0, minHeight: '600px', height: '600px' }}></div>
+            <div
+                ref={mapContainerRef}
+                className={cn("w-full rounded-b-lg", className)}
+                style={{ zIndex: 0, minHeight: '360px' }}
+            ></div>
         </div>
     );
 }

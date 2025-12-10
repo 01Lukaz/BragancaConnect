@@ -1,6 +1,5 @@
 
 import {
-  Home,
   History,
   Gift,
   DollarSign

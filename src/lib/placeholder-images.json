@@ -35,6 +35,18 @@
       "description": "Free coffee at a local cafe.",
       "imageUrl": "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb2ZmZWUlMjBjdXB8ZW58MHx8fHwxNzY1MzEwNTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "coffee cup"
+    },
+    {
+      "id": "reward-fertilizer",
+      "description": "Bag of organic fertilizer.",
+      "imageUrl": "https://images.unsplash.com/photo-1629994982633-684a7243e86f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWclMjBvZiUyMHNvaWx8ZW58MHx8fHwxNzY1MzE4MjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bag soil"
+    },
+    {
+      "id": "reward-tools",
+      "description": "Gardening tools.",
+      "imageUrl": "https://images.unsplash.com/photo-1455582444369-4d6c41c417e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJkZW5pbmclMjB0b29sc3xlbnwwfHx8fDE3NjUzMTgzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gardening tools"
     }
   ]
 }

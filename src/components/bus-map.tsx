@@ -1,3 +1,4 @@
+
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Tooltip, useMap } from 'react-leaflet';
@@ -83,7 +84,7 @@ const BusSimulator = () => {
     const map = useMap();
     const [busPosition, setBusPosition] = useState<[number, number] | null>(routePolyline.length > 0 ? routePolyline[0] : null);
     const busState = useRef({ seg: 0, t: 0, speed: 6.11 });
-    const animationFrameId = useRef<number>();
+    const animationFrameId = useRef<number>(0);
     const lastTime = useRef(performance.now());
     
     useEffect(() => {
@@ -146,10 +147,17 @@ const BusSimulator = () => {
 }
 
 export default function BusMap({ className }: { className?: string }) {
-     const [isClient, setIsClient] = useState(false)
+     const [isClient, setIsClient] = useState(false);
+     const mapRef = useRef<L.Map | null>(null);
 
     useEffect(() => {
-        setIsClient(true)
+        setIsClient(true);
+        return () => {
+             if (mapRef.current) {
+                mapRef.current.remove();
+                mapRef.current = null;
+            }
+        }
     }, [])
 
     return (
@@ -159,6 +167,7 @@ export default function BusMap({ className }: { className?: string }) {
                 zoom={15}
                 scrollWheelZoom={false}
                 className={cn("h-full w-full", className)}
+                whenCreated={map => mapRef.current = map}
             >
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -175,3 +184,4 @@ export default function BusMap({ className }: { className?: string }) {
         ) : null
     );
 }
+

@@ -21,9 +21,8 @@ export default function CooperadoLoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Redirect to the future cooperado dashboard
-    // For now, let's redirect to the main dashboard as a placeholder
-    router.push('/dashboard');
+    // Redirect to the cooperado dashboard
+    router.push('/dashboard-coop');
   };
 
   return (

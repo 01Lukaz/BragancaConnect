@@ -81,7 +81,7 @@ const segLens = routePolyline.slice(0, -1).map((p, i) => segmentDistanceMeters(p
 
 const BusSimulator = () => {
     const map = useMap();
-    const [busPosition, setBusPosition] = useState(routePolyline[0]);
+    const [busPosition, setBusPosition] = useState<[number, number] | null>(null);
     const busState = useRef({ seg: 0, t: 0, speed: 6.11 });
     const lastTime = useRef(performance.now());
     
@@ -97,6 +97,11 @@ const BusSimulator = () => {
 
             while (advance > 0 && segLens.length > 0) {
                 const segLen = segLens[state.seg] || 0;
+                if (segLen === 0) {
+                    state.seg = (state.seg + 1) % (routePolyline.length - 1);
+                    state.t = 0;
+                    continue;
+                }
                 const rem = (1 - state.t) * segLen;
 
                 if (advance < rem) {
@@ -123,7 +128,7 @@ const BusSimulator = () => {
         animationFrameId = requestAnimationFrame(animate);
 
         return () => cancelAnimationFrame(animationFrameId);
-    }, [map]);
+    }, []);
 
     useEffect(() => {
         if(routePolyline.length > 1) {
@@ -137,9 +142,6 @@ const BusSimulator = () => {
 }
 
 export default function BusMap({ className }: { className?: string }) {
-
-    if(typeof window === 'undefined') return <div className={cn("bg-muted", className)}></div>;
-
     return (
         <MapContainer
             center={[41.8061, -6.7569]}

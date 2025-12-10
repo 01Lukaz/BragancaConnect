@@ -63,13 +63,13 @@ export default function ProfileSelectionPage() {
             const ProfileIcon = profile.icon;
             return (
               <Link key={profile.type} href={profile.href} className="h-full">
-                <Card className="flex h-full transform-gpu cursor-pointer flex-col items-center justify-center border-2 border-transparent bg-background/80 text-foreground backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-background/95 hover:scale-105">
+                <Card className="flex h-full transform-gpu cursor-pointer flex-col items-center justify-center border-2 border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-white/20 hover:scale-105">
                   <CardHeader className="items-center p-6 pb-4">
                     <ProfileIcon className="h-14 w-14 text-primary" />
                   </CardHeader>
                   <CardContent className="p-6 pt-0 text-center">
                     <CardTitle className="text-2xl">{profile.type}</CardTitle>
-                    <CardDescription className="mt-2 text-muted-foreground">
+                    <CardDescription className="mt-2 text-white/80">
                       {profile.description}
                     </CardDescription>
                   </CardContent>
@@ -86,3 +86,4 @@ export default function ProfileSelectionPage() {
     </main>
   );
 }
+

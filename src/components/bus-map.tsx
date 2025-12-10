@@ -84,7 +84,7 @@ const BusSimulator = () => {
     const map = useMap();
     const [busPosition, setBusPosition] = useState<[number, number] | null>(routePolyline.length > 0 ? routePolyline[0] : null);
     const busState = useRef({ seg: 0, t: 0, speed: 6.11 });
-    const animationFrameId = useRef<number>(0);
+    const animationFrameId = useRef<number | null>(null);
     const lastTime = useRef(performance.now());
     
     useEffect(() => {

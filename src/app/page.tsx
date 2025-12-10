@@ -54,7 +54,7 @@ export default function ProfileSelectionPage() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
           Bem-vindo à Smart Bragança
         </h1>
-        <p className="mt-4 text-base sm:text-lg md:text-2xl font-light max-w-2xl">
+        <p className="mt-4 text-base sm:text-lg md:text-xl font-light max-w-2xl">
           Selecione o seu perfil para aceder à plataforma e descobrir uma cidade
           mais conectada e sustentável.
         </p>
@@ -63,13 +63,13 @@ export default function ProfileSelectionPage() {
             const ProfileIcon = profile.icon;
             return (
               <Link key={profile.type} href={profile.href} className="h-full">
-                <Card className="flex h-full transform-gpu cursor-pointer flex-col items-center justify-center border-2 border-transparent bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-white/20 hover:scale-105">
+                <Card className="flex h-full transform-gpu cursor-pointer flex-col items-center justify-center border-2 border-transparent bg-background/80 text-foreground backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-background/95 hover:scale-105">
                   <CardHeader className="items-center p-6 pb-4">
                     <ProfileIcon className="h-14 w-14 text-primary" />
                   </CardHeader>
                   <CardContent className="p-6 pt-0 text-center">
                     <CardTitle className="text-2xl">{profile.type}</CardTitle>
-                    <CardDescription className="mt-2 text-white/80">
+                    <CardDescription className="mt-2 text-muted-foreground">
                       {profile.description}
                     </CardDescription>
                   </CardContent>

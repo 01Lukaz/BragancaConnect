@@ -105,9 +105,14 @@ function OptimizedRoutePageContent() {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="p-0">
-            <div className="aspect-video h-auto min-h-[400px]">
-            {isClient && <WasteBinRouteMap highlightName={highlight ?? undefined} bins={binsOnRoute} />}
+        <CardContent className="p-0 h-full">
+          <div className="h-full w-full rounded-b-lg bg-muted flex items-center justify-center min-h-[360px] md:min-h-[480px] lg:min-h-[540px]">
+            {isClient && (
+              <WasteBinRouteMap
+                highlightName={highlight ?? undefined}
+                bins={binsOnRoute}
+              />
+            )}
           </div>
         </CardContent>
       </Card>

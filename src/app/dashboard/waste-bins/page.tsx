@@ -46,10 +46,10 @@ export default function WasteBinsPage() {
             <CardDescription>
                 Encontre os pontos de recolha de resíduos orgânicos na cidade.
             </CardDescription>
-            <div className="flex items-center gap-4 text-sm">
-                <span className="flex items-center gap-2"><Circle fill="hsl(var(--destructive))" className="h-3 w-3 text-destructive" /> Cheio (&gt;80%)</span>
-                <span className="flex items-center gap-2"><Circle fill="hsl(var(--chart-3))" className="h-3 w-3 text-chart-3" /> Médio (50-80%)</span>
-                <span className="flex items-center gap-2"><Circle fill="hsl(var(--accent))" className="h-3 w-3 text-accent" /> Vazio (&lt;50%)</span>
+            <div className="flex items-center flex-wrap gap-4 text-sm mt-2 sm:mt-0">
+                <span className="flex items-center gap-2"><Circle fill={getStatusColor('Cheio')} className="h-3 w-3 text-destructive" /> Cheio (&gt;80%)</span>
+                <span className="flex items-center gap-2"><Circle fill={getStatusColor('Médio')} className="h-3 w-3 text-chart-3" /> Médio (50-80%)</span>
+                <span className="flex items-center gap-2"><Circle fill={getStatusColor('Vazio')} className="h-3 w-3 text-accent" /> Vazio (&lt;50%)</span>
             </div>
           </div>
         </CardHeader>

@@ -12,15 +12,12 @@ import { PageTitle } from '@/components/layout/page-title';
 import {
   Bus,
   Trash2,
-  BatteryCharging,
   Leaf,
-  Trees,
   ArrowRight,
   Circle,
 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
 import { MapPlaceholder } from '@/components/map-placeholder';
 import dynamic from 'next/dynamic';
 
@@ -30,9 +27,9 @@ export default function DashboardPage() {
   return (
     <div>
       <PageTitle title="Painel de Controlo" />
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {/* Quick Actions */}
-        <Card className="lg:col-span-2 xl:col-span-1 flex flex-col justify-center">
+        <Card className="lg:col-span-1 flex flex-col justify-center">
           <CardHeader>
             <CardTitle>Ações Rápidas</CardTitle>
           </CardHeader>
@@ -100,7 +97,7 @@ export default function DashboardPage() {
         </Card>
 
         {/* Waste Bins */}
-        <Card>
+        <Card className="lg:col-span-1">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Trash2 className="h-6 w-6" />
@@ -128,26 +125,6 @@ export default function DashboardPage() {
             <MapPlaceholder />
           </CardContent>
         </Card>
-
-        {/* EV Chargers */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <BatteryCharging className="h-6 w-6" />
-              <span>Carregadores EV</span>
-            </CardTitle>
-            <CardDescription>Disponibilidade de postos</CardDescription>
-          </CardHeader>
-          <CardContent>
-             <p className="text-sm text-muted-foreground">Postos Disponíveis</p>
-            <p className="text-4xl font-bold">18 <span className="text-lg font-normal text-muted-foreground">/ 25</span></p>
-            <Progress value={(18/25)*100} className="mt-2 h-3" />
-             <Button asChild variant="outline" className="w-full mt-6">
-              <Link href="/dashboard/chargers">Ver Mapa de Carregadores <ArrowRight className="ml-2 h-4 w-4"/></Link>
-            </Button>
-          </CardContent>
-        </Card>
-
       </div>
     </div>
   );

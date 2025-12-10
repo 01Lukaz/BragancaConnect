@@ -8,24 +8,14 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from '@/components/ui/card';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { Trash2, Circle } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Trash2, Circle, Route, Clock, AlertTriangle } from 'lucide-react';
 
-const binData = [
-  { id: 'bin-001', location: 'Praça da Sé', level: 95, status: 'Cheio', type: 'Indiferenciado' },
-  { id: 'bin-002', location: 'Jardim do Castelo', level: 60, status: 'Médio', type: 'Reciclável' },
-  { id: 'bin-003', location: 'Avenida Sá Carneiro', level: 25, status: 'Vazio', type: 'Orgânico' },
-  { id: 'bin-004', location: 'Mercado Municipal', level: 88, status: 'Cheio', type: 'Indiferenciado' },
-  { id: 'bin-005', location: 'Parque do Eixo Atlântico', level: 45, status: 'Médio', type: 'Reciclável' },
+const binsOnRoute = [
+  { id: 'bin-001', location: 'Praça da Sé', level: 95, status: 'Cheio' },
+  { id: 'bin-002', location: 'Jardim do Castelo', level: 60, status: 'Médio' },
+  { id: 'bin-004', location: 'Mercado Municipal', level: 88, status: 'Cheio' },
 ];
 
 const getStatusColor = (status: string) => {
@@ -42,71 +32,69 @@ const getStatusColor = (status: string) => {
 };
 
 
-export default function WasteBinsPage() {
+export default function OptimizedRoutePage() {
   return (
     <div>
-      <PageTitle title="Contentores de Lixo Inteligentes" />
-      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-[380px_1fr]">
-        <aside className="flex flex-col gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Filtrar por Estado</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Select defaultValue="all">
-                <SelectTrigger className="h-12 text-base">
-                  <SelectValue placeholder="Selecionar estado..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todos</SelectItem>
-                  <SelectItem value="full">Cheios</SelectItem>
-                  <SelectItem value="medium">Médios</SelectItem>
-                  <SelectItem value="empty">Vazios</SelectItem>
-                </SelectContent>
-              </Select>
-            </CardContent>
-          </Card>
-          <Card className="flex-1">
-            <CardHeader>
-              <CardTitle>Estado dos Contentores</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {binData.map((bin) => (
-                 <Button asChild variant="ghost" className="h-auto w-full justify-start p-0" key={bin.id}>
-                    <Link href={`/dashboard/waste-bins/${bin.id}`}>
-                        <div
-                        className="flex items-center justify-between p-3 bg-muted rounded-lg w-full hover:bg-accent/50 transition-colors"
-                        >
-                        <div className="flex items-center gap-3 text-left">
-                            <Trash2 className="h-6 w-6 text-primary" />
-                            <div>
-                            <p className="font-semibold">{bin.location}</p>
-                            <p className="text-xs text-muted-foreground">{bin.type}</p>
-                            </div>
-                        </div>
-                        <div className="text-right flex items-center gap-2">
-                            <Circle
-                                fill={getStatusColor(bin.status)}
-                                className="h-3 w-3"
-                                style={{color: getStatusColor(bin.status)}}
-                            />
-                            <p className="font-bold text-lg">{bin.level}%</p>
-                        </div>
-                        </div>
-                    </Link>
-                </Button>
-              ))}
-            </CardContent>
-          </Card>
-        </aside>
-        <main>
-          <Card className="h-full">
-            <CardContent className="p-0 h-full">
-              <MapPlaceholder className="aspect-auto h-full min-h-[600px]" />
-            </CardContent>
-          </Card>
-        </main>
+      <PageTitle title="Rota Otimizada de Recolha" />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+         <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Contentores na Rota</CardTitle>
+            <AlertTriangle className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{binsOnRoute.length}</div>
+            <p className="text-xs text-muted-foreground">
+              Contentores com mais de 50% de capacidade.
+            </p>
+          </CardContent>
+        </Card>
+         <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Distância Total da Rota</CardTitle>
+            <Route className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">12.7 km</div>
+            <p className="text-xs text-muted-foreground">
+              Percurso otimizado.
+            </p>
+          </CardContent>
+        </Card>
+         <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Tempo Estimado</CardTitle>
+            <Clock className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">45 min</div>
+            <p className="text-xs text-muted-foreground">
+              Tempo estimado para conclusão da rota.
+            </p>
+          </CardContent>
+        </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Mapa da Rota de Recolha</CardTitle>
+          <div className="flex justify-between items-center">
+            <CardDescription>
+                Visualização do trajeto otimizado passando pelos contentores que necessitam de atenção.
+            </CardDescription>
+            <div className="flex items-center gap-4 text-sm">
+                <span className="flex items-center gap-2"><Circle fill="hsl(var(--destructive))" className="h-3 w-3 text-destructive" /> Cheio (&gt;80%)</span>
+                <span className="flex items-center gap-2"><Circle fill="hsl(var(--chart-3))" className="h-3 w-3 text-chart-3" /> Médio (50-80%)</span>
+                <span className="flex items-center gap-2"><Circle fill="hsl(var(--accent))" className="h-3 w-3 text-accent" /> Vazio (&lt;50%)</span>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="p-0">
+            {/* Em um app real, este placeholder seria substituído por um mapa interativo com a rota e os marcadores */}
+          <MapPlaceholder className="aspect-video h-[60vh] min-h-[500px]" />
+        </CardContent>
+      </Card>
     </div>
   );
 }

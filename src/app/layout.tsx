@@ -12,7 +12,7 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Smart Genius',
+  title: 'Bragança Connect',
   description: 'Tecnologia a favor da cidade',
 };
 

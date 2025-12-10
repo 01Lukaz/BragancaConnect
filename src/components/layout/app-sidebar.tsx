@@ -36,7 +36,7 @@ export function AppSidebar() {
         >
           <Icons.logo className="h-8 w-8 text-primary shrink-0" />
           <span className="text-xl font-semibold group-data-[collapsible=icon]:hidden">
-            Smart Genius
+            Bragança Connect
           </span>
         </Link>
       </SidebarHeader>

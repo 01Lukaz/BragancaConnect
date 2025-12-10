@@ -37,7 +37,7 @@ export default function ProfileSelectionPage() {
   const splashBg = PlaceHolderImages.find((img) => img.id === 'splash-bg');
 
   return (
-    <main className="relative flex h-screen min-h-[600px] w-full flex-col items-center justify-start p-4 pt-16 pb-8 md:justify-center">
+    <main className="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
       {splashBg && (
         <Image
           src={splashBg.imageUrl}
@@ -48,11 +48,11 @@ export default function ProfileSelectionPage() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-black/70" />
-      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center text-white">
+      <div className="absolute inset-0 bg-black/75" />
+      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center text-white py-12">
         <Icons.logo className="h-20 w-20 mb-4 text-white" />
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-          Bem-vindo à Smart Genius
+          Bem-vindo à Bragança Connect
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl font-light max-w-2xl">
           Selecione o seu perfil para aceder à plataforma e descobrir uma cidade
@@ -79,7 +79,7 @@ export default function ProfileSelectionPage() {
           })}
         </div>
       </div>
-      <div className="absolute bottom-6 z-10 text-center text-xs text-white/50">
+      <div className="absolute bottom-6 z-10 text-center text-xs text-white/50 px-4">
         <p>Um projeto para um futuro mais sustentável e conectado.</p>
       </div>
     </main>

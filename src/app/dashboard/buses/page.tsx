@@ -1,3 +1,4 @@
+
 'use client';
 
 import { PageTitle } from '@/components/layout/page-title';
@@ -19,6 +20,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
+import { MarkerData } from '@/components/map-placeholder';
 
 const BusMap = dynamic(() => import('@/components/bus-map'), { ssr: false });
 
@@ -29,6 +31,12 @@ const busLines = [
   { id: '2B', name: 'Linha 2B: Estação', status: 'Atrasado', nextArrival: 8 },
   { id: '5', name: 'Linha 5: Circular', status: 'A tempo', nextArrival: 15 },
 ];
+
+const collectionPoints: MarkerData[] = [
+    { x: 30, y: 40, label: 'Ponto de Coleta 1: Praça da Sé' },
+    { x: 55, y: 60, label: 'Ponto de Coleta 2: Jardim do Castelo' },
+    { x: 70, y exhilarating: 25, label: 'Ponto de Coleta 3: Mercado Municipal' },
+]
 
 export default function BusesPage() {
     const [isClient, setIsClient] = useState(false);
@@ -112,7 +120,9 @@ export default function BusesPage() {
         <main>
           <Card className="h-full">
             <CardContent className="p-0 h-full">
-               <BusMap className="aspect-video lg:aspect-auto h-full min-h-[400px] lg:min-h-[600px]" />
+                <div key={Math.random()} className="aspect-video lg:aspect-auto h-full min-h-[400px] lg:min-h-[600px]">
+                    {isClient && <BusMap />}
+                </div>
             </CardContent>
           </Card>
         </main>

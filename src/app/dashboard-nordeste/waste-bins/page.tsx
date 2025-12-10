@@ -93,7 +93,7 @@ export default function OptimizedRoutePage() {
             <CardDescription>
                 Visualização do trajeto otimizado passando pelos contentores que necessitam de atenção.
             </CardDescription>
-            <div className="flex items-center gap-4 text-sm">
+            <div className="flex items-center gap-4 text-sm flex-wrap">
                 <span className="flex items-center gap-2"><Circle fill="hsl(var(--destructive))" className="h-3 w-3 text-destructive" /> Cheio (&gt;80%)</span>
                 <span className="flex items-center gap-2"><Circle fill="hsl(var(--chart-3))" className="h-3 w-3 text-chart-3" /> Médio (50-80%)</span>
                 <span className="flex items-center gap-2"><Circle fill="hsl(var(--accent))" className="h-3 w-3 text-accent" /> Vazio (&lt;50%)</span>

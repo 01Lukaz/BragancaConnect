@@ -81,7 +81,6 @@ export default function ProfileSelectionPage() {
       </div>
       <div className="absolute bottom-6 z-10 text-center text-xs text-white/50">
         <p>Um projeto para um futuro mais sustentável e conectado.</p>
-        <p>ODS: 7, 11, 12, 13</p>
       </div>
     </main>
   );

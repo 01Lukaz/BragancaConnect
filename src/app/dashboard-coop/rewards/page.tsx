@@ -12,10 +12,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Gift, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-// Create a new placeholder image for fertilizer
 const rewards = [
   {
     id: 'reward-fertilizer',
@@ -65,4 +64,3 @@ export default function RewardsPage() {
     </div>
   );
 }
-

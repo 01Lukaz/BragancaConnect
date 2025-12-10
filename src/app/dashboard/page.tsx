@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -147,24 +148,6 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        {/* Ecoparks */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Trees className="h-6 w-6" />
-              <span>Ecoparques Solares</span>
-            </CardTitle>
-             <CardDescription>Energia e vagas disponíveis</CardDescription>
-          </CardHeader>
-          <CardContent>
-             <p className="text-sm text-muted-foreground">Energia Total Gerada Hoje</p>
-            <p className="text-4xl font-bold">42.5 <span className="text-lg font-normal text-muted-foreground">kWh</span></p>
-            <p className="text-sm text-muted-foreground mt-4">Vagas livres: <span className="font-bold text-foreground">32</span></p>
-             <Button asChild variant="outline" className="w-full mt-4">
-              <Link href="/dashboard/ecopark">Ver Ecoparques <ArrowRight className="ml-2 h-4 w-4"/></Link>
-            </Button>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );

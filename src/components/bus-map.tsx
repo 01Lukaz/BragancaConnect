@@ -77,7 +77,7 @@ export default function BusMap({ className, onStopChange, routeKey = 'U1', onBus
         });
 
         // Bus simulation
-        const busState = { seg: 0, t: 0, speed: 6.11 };
+        const busState = { seg: 0, t: 0, speed: 12.22 };
         const busMarker = routePolyline.length > 0 ? L.marker(routePolyline[0], { icon: busIcon }).addTo(map) : L.marker([0,0], { icon: busIcon });
         const segLens = routePolyline.length > 1 ? routePolyline.slice(0, -1).map((p, i) => segmentDistanceMeters(p, routePolyline[i + 1]!)) : [];
 

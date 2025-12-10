@@ -17,13 +17,54 @@ import {
   Circle,
 } from 'lucide-react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { MapPlaceholder } from '@/components/map-placeholder';
+import { Switch } from '@/components/ui/switch';
 import dynamic from 'next/dynamic';
+import { busRoutes } from '@/lib/bus-routes';
 
+const CityMap = dynamic(() => import('@/components/city-map'), { ssr: false });
 const WasteBinChart = dynamic(() => import('@/components/waste-bin-chart'), { ssr: false });
 
+function calculateDistance(lat1: number, lng1: number, lat2: number, lng2: number): number {
+    const R = 6371000;
+    const toRad = (d: number) => d * Math.PI / 180;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lng2 - lng1);
+    const a = Math.sin(dLat / 2) ** 2 + 
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(a));
+}
+
 export default function DashboardPage() {
+  const [satellite, setSatellite] = useState(true);
+  const [busInfo, setBusInfo] = useState<{ [key: string]: { nextStop: string; timeToNext: number } }>({
+    U1: { nextStop: '', timeToNext: 0 },
+    U2: { nextStop: '', timeToNext: 0 }
+  });
+
+  useEffect(() => {
+    // Simulate bus positions - in a real app, this would come from an API
+    // For now, we'll show the first stop as next stop with a random time
+    const U1Route = busRoutes['U1'];
+    const U2Route = busRoutes['U2'];
+    
+    if (U1Route && U1Route.stops.length > 0) {
+      const nextStopU1 = U1Route.stops[1]?.nome || U1Route.stops[0]?.nome || 'Parada Desconhecida';
+      setBusInfo(prev => ({
+        ...prev,
+        U1: { nextStop: nextStopU1, timeToNext: Math.floor(Math.random() * 15) + 2 }
+      }));
+    }
+
+    if (U2Route && U2Route.stops.length > 0) {
+      const nextStopU2 = U2Route.stops[1]?.nome || U2Route.stops[0]?.nome || 'Parada Desconhecida';
+      setBusInfo(prev => ({
+        ...prev,
+        U2: { nextStop: nextStopU2, timeToNext: Math.floor(Math.random() * 15) + 2 }
+      }));
+    }
+  }, []);
   return (
     <div>
       <PageTitle title="Painel de Controlo" />
@@ -72,22 +113,22 @@ export default function DashboardPage() {
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-semibold">Linha 3A</p>
-                <p className="text-sm text-muted-foreground">Dest: Sé</p>
+                <p className="font-semibold">Linha U1</p>
+                <p className="text-sm text-muted-foreground">Dest: {busInfo.U1.nextStop}</p>
               </div>
               <div className="text-right">
-                <p className="font-bold text-lg">5 min</p>
-                <p className="text-xs text-accent-foreground flex items-center gap-1"><Circle fill="hsl(var(--accent))" className="h-2 w-2 text-accent" /> A tempo</p>
+                <p className="font-bold text-lg">{busInfo.U1.timeToNext} min</p>
+                <p className="text-xs text-accent-foreground flex items-center gap-1 justify-end"><Circle fill="#2563EB" className="h-2 w-2" style={{ color: '#2563EB' }} /> A tempo</p>
               </div>
             </div>
              <div className="flex items-center justify-between">
               <div>
-                <p className="font-semibold">Linha 1</p>
-                <p className="text-sm text-muted-foreground">Dest: Hospital</p>
+                <p className="font-semibold">Linha U2</p>
+                <p className="text-sm text-muted-foreground">Dest: {busInfo.U2.nextStop}</p>
               </div>
               <div className="text-right">
-                <p className="font-bold text-lg">12 min</p>
-                 <p className="text-xs text-accent-foreground flex items-center gap-1"><Circle fill="hsl(var(--accent))" className="h-2 w-2 text-accent" /> A tempo</p>
+                <p className="font-bold text-lg">{busInfo.U2.timeToNext} min</p>
+                <p className="text-xs text-accent-foreground flex items-center gap-1 justify-end"><Circle fill="#DC2626" className="h-2 w-2" style={{ color: '#DC2626' }} /> A tempo</p>
               </div>
             </div>
             <Button asChild variant="outline" className="w-full mt-2">
@@ -116,13 +157,19 @@ export default function DashboardPage() {
         {/* Map Preview */}
         <Card className="lg:col-span-2">
           <CardHeader>
-            <CardTitle>Mapa da Cidade</CardTitle>
-            <CardDescription>
-              Vista geral dos serviços inteligentes.
-            </CardDescription>
-          </CardHeader>
+              <div className="flex items-start gap-4 w-full">
+                <div className="flex-1">
+                  <CardTitle>Mapa da Cidade</CardTitle>
+                  <CardDescription>Vista geral dos serviços inteligentes.</CardDescription>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-muted-foreground">Satélite</span>
+                  <Switch checked={satellite} onCheckedChange={(v: boolean) => setSatellite(!!v)} />
+                </div>
+              </div>
+            </CardHeader>
           <CardContent>
-            <MapPlaceholder />
+            <CityMap satellite={satellite} />
           </CardContent>
         </Card>
       </div>

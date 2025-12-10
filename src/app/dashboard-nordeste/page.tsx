@@ -18,6 +18,7 @@ import {
 import { Trash2, Circle } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 const binData = [
   { id: 'bin-001', location: 'Praça da Sé', level: 95, status: 'Cheio', type: 'Indiferenciado' },
@@ -42,6 +43,19 @@ const getStatusColor = (status: string) => {
 
 
 export default function WasteBinsPage() {
+  const [selected, setSelected] = useState<'all' | 'full' | 'medium' | 'empty'>('all');
+
+  const statusMap: Record<string, 'full'|'medium'|'empty'> = {
+    'Cheio': 'full',
+    'Médio': 'medium',
+    'Vazio': 'empty'
+  };
+
+  const filtered = binData.filter(b => {
+    if (selected === 'all') return true;
+    return statusMap[b.status] === selected;
+  });
+
   return (
     <div>
       <PageTitle title="Contentores de Lixo Inteligentes" />
@@ -51,7 +65,7 @@ export default function WasteBinsPage() {
             <CardTitle>Filtrar por Estado</CardTitle>
           </CardHeader>
           <CardContent>
-            <Select defaultValue="all">
+            <Select value={selected} onValueChange={(v) => setSelected(v as any)}>
               <SelectTrigger className="h-12 text-base">
                 <SelectValue placeholder="Selecionar estado..." />
               </SelectTrigger>
@@ -69,9 +83,9 @@ export default function WasteBinsPage() {
             <CardTitle>Estado dos Contentores</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            {binData.map((bin) => (
-               <Button asChild variant="ghost" className="h-auto w-full justify-start p-0" key={bin.id}>
-                  <Link href={`/dashboard/waste-bins/${bin.id}`}>
+            {filtered.map((bin) => (
+              <Button asChild variant="ghost" className="h-auto w-full justify-start p-0" key={bin.id}>
+                <Link href={`/dashboard-nordeste/waste-bins?highlight=${encodeURIComponent(bin.location)}`}>
                       <div
                       className="flex items-center justify-between p-3 bg-muted rounded-lg w-full hover:bg-accent/50 transition-colors"
                       >

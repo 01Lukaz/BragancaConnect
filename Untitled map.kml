@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Untitled map</name>
+	<gx:CascadingStyle kml:id="__managed_style_2CE76DE7EE3C3C4A93D7">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>5.0087</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0CFB613E9E3C3C4BDABC">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_14C3F2FB2C3C3C4BDABC</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_239AB05FDB3C3C4BDABC</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_108DBBC8263C3C4A93D7">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.33913</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_239AB05FDB3C3C4BDABC">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=42a5f5&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>5.0087</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_069A0AFCB93C3C4A93D7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_108DBBC8263C3C4A93D7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2CE76DE7EE3C3C4A93D7</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_2D6E56E1123C3C49EA24">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=d32f2f&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>5.0087</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_14C3F2FB2C3C3C4BDABC">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=42a5f5&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.33913</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_18A83BEA683C3C49EA24">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=d32f2f&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.33913</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_085951ACB03C3C49EA24">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_18A83BEA683C3C49EA24</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_2D6E56E1123C3C49EA24</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0B34EADF3A3C3C49E1D7">
+		<name>Estação Rodoviária de Bragança</name>
+		<LookAt>
+			<longitude>-6.760734306693932</longitude>
+			<latitude>41.80945056795666</latitude>
+			<altitude>688.2120829120504</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>314.9133471732057</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.760698630824013,41.80946510777175,688.1297457748256</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08923C8F323C3C4A8A4C">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.760723415429632</longitude>
+			<latitude>41.80965591625787</latitude>
+			<altitude>688.1298020495389</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>582.6502669263573</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_069A0AFCB93C3C4A93D7</styleUrl>
+		<Point>
+			<coordinates>-6.761020184034842,41.80971724658141,689.2172203859669</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04D8EEB89D3C3C4AAD5F">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.760668682018178</longitude>
+			<latitude>41.80928874621627</latitude>
+			<altitude>688.1297774700229</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>582.6503132815561</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_069A0AFCB93C3C4A93D7</styleUrl>
+		<Point>
+			<coordinates>-6.760657271646981,41.80843000345602,690.9410226997384</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0710AC7E473C3C4AD506">
+		<name>Escola Secundária Abade de Baçal</name>
+		<LookAt>
+			<longitude>-6.760698256812621</longitude>
+			<latitude>41.80904626399543</latitude>
+			<altitude>688.564806593324</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>582.2152697415733</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.761606823187138,41.80811465753482,698.3818713838994</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0EC58338543C3C4B79E8">
+		<name>Escola Augusto Moreno</name>
+		<LookAt>
+			<longitude>-6.762991764516286</longitude>
+			<latitude>41.80922192708692</latitude>
+			<altitude>701.2159556352708</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>676.6335317670747</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.7642476805471,41.80874278216888,709.0740281729609</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="096531D5F53C3C4BCF96">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.763831207147603</longitude>
+			<latitude>41.80944773042268</latitude>
+			<altitude>703.7509851674303</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>674.0984586595005</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.765810979791706,41.80921641912053,712.7175803689963</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="045158F4053C3C4BE388">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.763831207147603</longitude>
+			<latitude>41.80944773042268</latitude>
+			<altitude>703.7509851674303</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>674.0984586595005</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.765506202286792,41.80983956438428,706.0839227359263</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01FE4662263C3C4BEA13">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.763831207147603</longitude>
+			<latitude>41.80944773042268</latitude>
+			<altitude>703.7509851674303</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>674.0984586595005</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.765024127059055,41.81019429313453,702.6838174436053</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BBD6A6DDA3C3C4BF21C">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.763831207147603</longitude>
+			<latitude>41.80944773042268</latitude>
+			<altitude>703.7509851674303</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>674.0984586595005</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.765244589402187,41.81033266417956,702.1350018728242</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BE0551A363C3C4BF8EC">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.763831207147603</longitude>
+			<latitude>41.80944773042268</latitude>
+			<altitude>703.7509851674303</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>674.0984586595005</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.765506202286792,41.80983956438428,706.0664511718089</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="085254141C3C3C4C5694">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.762160346497784</longitude>
+			<latitude>41.81000269614295</latitude>
+			<altitude>694.6304393147684</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1276.64127107797</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.765166583424539,41.80826664033421,717.6516738509737</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0CC83614DF3C3C4C7BC6">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.761907928928857</longitude>
+			<latitude>41.8087727699586</latitude>
+			<altitude>696.2371298887293</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1275.034692600748</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.764443364204808,41.8075395722925,718.0982570485803</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A111C14F13C3C4C8CAC">
+		<name>PSP</name>
+		<LookAt>
+			<longitude>-6.761907928928857</longitude>
+			<latitude>41.8087727699586</latitude>
+			<altitude>696.2371298887293</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1275.034692600748</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.76525736386966,41.80734454271581,722.1243775382218</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01A34D19BA3C3C4CE873">
+		<name>Escola Paulo Quintela</name>
+		<LookAt>
+			<longitude>-6.766417082526327</longitude>
+			<latitude>41.80787276348091</latitude>
+			<altitude>722.6001298592093</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1248.671563984972</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.768788300401579,41.80763108420616,725.5846961555609</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A65DABAC63C3C4D242C">
+		<name>Luciano Cordeiro 1</name>
+		<LookAt>
+			<longitude>-6.767387114194458</longitude>
+			<latitude>41.807912479828</latitude>
+			<altitude>723.7116627180461</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.560059030075</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.772298067087532,41.80819547254257,721.4750468104934</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0309D994483C3C4D41D9">
+		<name>Luciano Cordeiro 2</name>
+		<LookAt>
+			<longitude>-6.770458022040482</longitude>
+			<latitude>41.80788848285265</latitude>
+			<altitude>723.9333154466799</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.338481180195</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.774608637923414,41.80776513407439,718.7958268623006</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="060E720DA73C3C4D7644">
+		<name>Rua Almirante Gago Coutinho 1</name>
+		<LookAt>
+			<longitude>-6.770458022040482</longitude>
+			<latitude>41.80788848285265</latitude>
+			<altitude>723.9333154466799</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.338481180195</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.775827372545425,41.80648268242535,706.5799399404899</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01A629D2AB3C3C4D8C0C">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.770458022040482</longitude>
+			<latitude>41.80788848285265</latitude>
+			<altitude>723.9333154466799</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.338481180195</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.770219817110801,41.80737538929461,721.9200022995063</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="067739EA723C3C4DA216">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.770458022040482</longitude>
+			<latitude>41.80788848285265</latitude>
+			<altitude>723.9333154466799</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.338481180195</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.77049740073146,41.80846437724617,725.4233298779502</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06D595F02E3C3C4DBF90">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.770458022040482</longitude>
+			<latitude>41.80788848285265</latitude>
+			<altitude>723.9333154466799</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.338481180195</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.775934696222221,41.8075637616947,711.7500895592834</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00A41BC8183C3C4DCD03">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.770458022040482</longitude>
+			<latitude>41.80788848285265</latitude>
+			<altitude>723.9333154466799</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1247.338481180195</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.775583000347338,41.80695322317428,710.8554262821602</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09583675263C3C4F0FAF">
+		<name>Rua Almirante Gago Coutinho 2</name>
+		<LookAt>
+			<longitude>-6.777288673555613</longitude>
+			<latitude>41.80637954236524</latitude>
+			<altitude>706.2203099570525</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>756.5379810734885</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.777506447858913,41.8061172547429,706.6795158119255</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0AE95F73543C3C4F4000">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.779787510025766</longitude>
+			<latitude>41.80582274482994</latitude>
+			<altitude>709.1652572609396</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>486.103142399661</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.780951674898609,41.80536380827737,710.0429368267629</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0E3CA612843C3C4F5726">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.779984736668964</longitude>
+			<latitude>41.80551040696103</latitude>
+			<altitude>709.2517930166105</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>486.0165972436516</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.780828214222416,41.80508615123407,710.8086612216042</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08C18695A23C3C4F7054">
+		<name>Largo de São Tiago</name>
+		<LookAt>
+			<longitude>-6.779984736668964</longitude>
+			<latitude>41.80551040696103</latitude>
+			<altitude>709.2517930166105</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>486.0165972436516</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.7811715018142,41.80465430212784,710.9701826055091</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="03E1267FA03C3C4FFA58">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.780243054913708</longitude>
+			<latitude>41.80408101476713</latitude>
+			<altitude>707.9222106150017</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>487.3462034085242</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.781051572395803,41.803787135212,706.90418529383</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C3B3EEBAC3C3C5014B6">
+		<name>Cruzamento Santiago</name>
+		<LookAt>
+			<longitude>-6.780506353195496</longitude>
+			<latitude>41.80406232191341</latitude>
+			<altitude>708.2433818949326</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>487.0250082365965</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.781758637319544,41.80378681926804,706.3933782528982</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="067FB7BC4D3C3C50D4CB">
+		<name>Avenida Abade Baçal</name>
+		<LookAt>
+			<longitude>-6.785295609335076</longitude>
+			<latitude>41.80415272964467</latitude>
+			<altitude>707.6013679281862</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>279.1665356806334</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.785435246315465,41.80401716366662,708.4407008999736</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="088153ACD83C3C5140B3">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.786996989403197</longitude>
+			<latitude>41.8051284612955</latitude>
+			<altitude>710.9705346662267</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>542.5268757018786</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.787336898549087,41.80439805437127,713.9813213843496</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BE04100503C3C5156AC">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.78877499406279</longitude>
+			<latitude>41.80586719655165</latitude>
+			<altitude>714.5052112775743</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1003.770281290635</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.789379703250173,41.80591534490468,717.5715977462841</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="099FC10EF33C3C516008">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.78877499406279</longitude>
+			<latitude>41.80586719655165</latitude>
+			<altitude>714.5052112775743</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1003.770281290635</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.790759838840746,41.80704056051265,720.3660142040652</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01AD33D7F23C3C5166D7">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.78877499406279</longitude>
+			<latitude>41.80586719655165</latitude>
+			<altitude>714.5052112775743</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1003.770281290635</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.791377757803013,41.80708519652548,725.4333871325907</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0148D118AF3C3C517B77">
+		<name>Rotunda do Pastor</name>
+		<LookAt>
+			<longitude>-6.78877499406279</longitude>
+			<latitude>41.80586719655165</latitude>
+			<altitude>714.5052112775743</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1003.770281290635</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.790263861414626,41.80613750815004,721.1903863466887</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="05F6F967633C3C52267E">
+		<name>Avenida Abade Baçal 2</name>
+		<LookAt>
+			<longitude>-6.786625210808666</longitude>
+			<latitude>41.80430754247546</latitude>
+			<altitude>709.319330902982</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>616.346695269167</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.78717320528918,41.80422385949802,713.2937983384811</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01FB7018AE3C3C52C87C">
+		<name>Escola Primária do Campo Redondo</name>
+		<LookAt>
+			<longitude>-6.777983682479665</longitude>
+			<latitude>41.80334995231376</latitude>
+			<altitude>702.3545290597024</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>623.311517521579</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.776859392555016,41.80332425076249,700.1817670861384</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="03299BD10C3C3C52F9AE">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.777983682479665</longitude>
+			<latitude>41.80334995231376</latitude>
+			<altitude>702.3545290597024</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>623.311517521579</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.776574790659465,41.80315270894152,699.6206281396913</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0CB9714DB03C3C5348D6">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.777920846507599</longitude>
+			<latitude>41.80235072119078</latitude>
+			<altitude>700.5133037594238</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>625.1526533043216</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.778031444367929,41.80230512110337,700.480375067874</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04F777832C3C3C53652E">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.777920846507599</longitude>
+			<latitude>41.80235072119078</latitude>
+			<altitude>700.5133037594238</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>625.1526533043216</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.779315606835912,41.80221385126749,702.0913913056095</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="01548166523C3C5383AC">
+		<name>Associação Amigos do Campo Redondo</name>
+		<LookAt>
+			<longitude>-6.77939214591072</longitude>
+			<latitude>41.80186986785792</latitude>
+			<altitude>702.3350299960367</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>623.3310330602399</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.780588464194635,41.80149333067269,699.9479893240322</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A5001CFA03C3C53FB1C">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.781559130313538</longitude>
+			<latitude>41.80184998914378</latitude>
+			<altitude>699.2513011899263</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>626.4147199446597</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.782832920713057,41.80162847848391,698.6688693320826</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="06E8D92A963C3C5418A3">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.781559130313538</longitude>
+			<latitude>41.80184998914378</latitude>
+			<altitude>699.2513011899263</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>626.4147199446597</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.783010702678736,41.80087320349347,695.9301471729138</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="03C2CECEB93C3C54298C">
+		<name>Rua da Cerâmica</name>
+		<LookAt>
+			<longitude>-6.781559130313538</longitude>
+			<latitude>41.80184998914378</latitude>
+			<altitude>699.2513011899263</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>626.4147199446597</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.782733449491357,41.8005975710635,694.5185075562175</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C8422837A3C3C54EDAB">
+		<name>Rua Conde de Areãs 2</name>
+		<LookAt>
+			<longitude>-6.781338064019078</longitude>
+			<latitude>41.80144000445788</latitude>
+			<altitude>698.3769891974448</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>627.289025347709</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.781358073602548,41.80049023544024,692.5356756060825</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08EA796B593C3C55956C">
+		<name>Rua Conde de Areães 1</name>
+		<LookAt>
+			<longitude>-6.780244611189067</longitude>
+			<latitude>41.8017461621113</latitude>
+			<altitude>701.3612046977744</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>624.3048630749399</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.779022793261954,41.80189531590555,702.2331971266432</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0DA6102DDF3C3C56508E">
+		<name>Eixo Atlântico</name>
+		<LookAt>
+			<longitude>-6.776346193444648</longitude>
+			<latitude>41.8029325516067</latitude>
+			<altitude>698.8239978830942</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>349.285680668545</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.775834376361283,41.80325004568996,698.5395558325142</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="04290320963C3C56E9D8">
+		<name>Estádio Municipal</name>
+		<LookAt>
+			<longitude>-6.77328243398018</longitude>
+			<latitude>41.80257791696827</latitude>
+			<altitude>695.2473871845438</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>603.1227159544505</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.772635069126936,41.80268318569488,698.6835248405122</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0D37BFB1BB3C3C573851">
+		<name>Hospital</name>
+		<LookAt>
+			<longitude>-6.76875544384953</longitude>
+			<latitude>41.80210556007201</latitude>
+			<altitude>702.7785124908927</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>595.591572239282</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.768013391759365,41.80166604495515,700.8458771634465</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="030C55E95D3C3C5786A1">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.767650197951087</longitude>
+			<latitude>41.8017241668032</latitude>
+			<altitude>701.9237289188605</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>233.3726520623895</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.767165940556643,41.8014811397889,700.4903219431584</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="068816FAE83C3C57C31B">
+		<name>Rua Padre António Vieira</name>
+		<LookAt>
+			<longitude>-6.769089194474756</longitude>
+			<latitude>41.80032676314725</latitude>
+			<altitude>688.4440476338909</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>349.8107460044412</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.769180981553045,41.80035697026746,688.4098735934044</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="044E12ED593C3C580554">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.769089194474756</longitude>
+			<latitude>41.80032676314725</latitude>
+			<altitude>688.4440476338909</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>349.8107460044412</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.769439800781924,41.79976776019084,683.6869640231766</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0AF58243EB3C3C58547B">
+		<name>Igreja Santos Mártires</name>
+		<LookAt>
+			<longitude>-6.770940471345748</longitude>
+			<latitude>41.79792123909574</latitude>
+			<altitude>671.5941886465492</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>712.2816993967717</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.771393118619521,41.79676270894853,674.8271853063343</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B15939FBE3C3C590E60">
+		<name>Supinorte</name>
+		<LookAt>
+			<longitude>-6.770478930154122</longitude>
+			<latitude>41.79462318262787</latitude>
+			<altitude>682.0907121736993</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>110.3971887441185</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.770578742614779,41.79447501517269,683.0242225644373</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09599C1FEB3C3C5948E7">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.771325168684203</longitude>
+			<latitude>41.79332795523056</latitude>
+			<altitude>691.1735029166259</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>914.8935514960613</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.770233527315223,41.7915900552356,689.0421612936256</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02AADB83923C3C595A41">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.771325168684203</longitude>
+			<latitude>41.79332795523056</latitude>
+			<altitude>691.1735029166259</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>914.8935514960613</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.769990171451193,41.79187004348492,688.753339975414</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F99B172BE3C3C596299">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.771325168684203</longitude>
+			<latitude>41.79332795523056</latitude>
+			<altitude>691.1735029166259</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>914.8935514960613</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.770309775671511,41.7921016659506,687.1329463333508</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B74951FE23C3C597A0C">
+		<name>Rotunda da Cantarinha</name>
+		<LookAt>
+			<longitude>-6.771325168684203</longitude>
+			<latitude>41.79332795523056</latitude>
+			<altitude>691.1735029166259</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>914.8935514960613</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.770315311564755,41.79269155076739,685.0382607047685</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0FA419F35A3C3C5A0296">
+		<name>Escola Superior Educação</name>
+		<LookAt>
+			<longitude>-6.770396019202818</longitude>
+			<latitude>41.79447526384009</latitude>
+			<altitude>682.2764403306496</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>311.7643226361906</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.770298923863709,41.79472524498762,680.9867961708679</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="02750362B73C3C5A4754">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.771133294566358</longitude>
+			<latitude>41.79695129635333</latitude>
+			<altitude>673.0323129823626</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1772.550114083569</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.770856453993312,41.79623261594259,676.2488547971512</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0D344F73283C3C5A5738">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.771133294566358</longitude>
+			<latitude>41.79695129635333</latitude>
+			<altitude>673.0323129823626</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1772.550114083569</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.770825688566716,41.79844850529383,672.7617337929096</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="002CA769E03C3C5A6ED0">
+		<name>Cantina do IPB</name>
+		<LookAt>
+			<longitude>-6.76925084051522</longitude>
+			<latitude>41.79860996207361</latitude>
+			<altitude>675.154825677195</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>554.332571356572</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.76880411555026,41.79941211259398,681.0279941528498</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0518EA4ED33C3C5AE634">
+		<name>Viaduto 1</name>
+		<LookAt>
+			<longitude>-6.765231539343683</longitude>
+			<latitude>41.79927589303681</latitude>
+			<altitude>682.2413663700723</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>200.4644011634082</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.764865121928293,41.79941995802334,683.57657980368</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0AEC77A6283C3C5B5EE1">
+		<name>Viaduto 2</name>
+		<LookAt>
+			<longitude>-6.761911731845109</longitude>
+			<latitude>41.801687341508</latitude>
+			<altitude>688.269684156704</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>267.2604810207122</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.761774633780229,41.80182216653619,689.5251294574077</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="09FDAF9BC53C3C5BC5B4">
+		<name>Avenida Sá Carneiro 8</name>
+		<LookAt>
+			<longitude>-6.759617731029573</longitude>
+			<latitude>41.8050230665114</latitude>
+			<altitude>683.0847458558953</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>378.0351517368035</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.76011126694406,41.80475802762616,687.8645695774643</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0491D653BA3C3C5C06BF">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.759016973626709</longitude>
+			<latitude>41.80620222416775</latitude>
+			<altitude>681.5077469255064</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>379.6121555972423</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.759650817900237,41.80626806785816,686.0246874221808</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="005F9362753C3C5C148B">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.759016973626709</longitude>
+			<latitude>41.80620222416775</latitude>
+			<altitude>681.5077469255064</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>379.6121555972423</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.759174215378208,41.806781192826,683.3602293639772</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C2B7112DC3C3C5C2249">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.75795003585097</longitude>
+			<latitude>41.80682347178131</latitude>
+			<altitude>682.1037913549796</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>379.0160740969077</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.75834207353107,41.80712734893059,684.2427436095325</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="08063FC1A93C3C5C36F7">
+		<name>Avenida João da Cruz</name>
+		<LookAt>
+			<longitude>-6.758217242153805</longitude>
+			<latitude>41.80710634275393</latitude>
+			<altitude>684.0061764592753</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>144.5528232742436</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_085951ACB03C3C49EA24</styleUrl>
+		<Point>
+			<coordinates>-6.758409167015168,41.80733965160358,685.2669805825038</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0AE998F98E3C3C5CA40F">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.758770073730711</longitude>
+			<latitude>41.80764898571164</latitude>
+			<altitude>686.4999105642272</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>571.3962444916252</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.759410422093066,41.80850992340434,689.0650720124918</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0E2B168F723C3C5CB9B4">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.758770073730711</longitude>
+			<latitude>41.80764898571164</latitude>
+			<altitude>686.4999105642272</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>571.3962444916252</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.76005867157465,41.80833316653889,688.370259843627</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0A29C47C4B3C3C5CC080">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.758770073730711</longitude>
+			<latitude>41.80764898571164</latitude>
+			<altitude>686.4999105642272</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>571.3962444916252</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.760543696782618,41.80843543568585,690.5030047285209</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="099F2FD9293C3C5CEC4C">
+		<name>Untitled placemark</name>
+		<LookAt>
+			<longitude>-6.759797664629863</longitude>
+			<latitude>41.80852830081421</latitude>
+			<altitude>688.6691416531945</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>303.2942775485571</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0CFB613E9E3C3C4BDABC</styleUrl>
+		<Point>
+			<coordinates>-6.760698528238493,41.80879317835705,689.7223111609192</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

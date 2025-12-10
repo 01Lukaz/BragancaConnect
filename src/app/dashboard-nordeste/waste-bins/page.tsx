@@ -12,15 +12,20 @@ import {
 import { Trash2, Circle, Route, Clock, AlertTriangle } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const WasteBinRouteMap = dynamic(() => import('@/components/waste-bin-route-map'), { ssr: false });
 
 
-const binsOnRoute = [
-  { id: 'bin-001', location: 'Praça da Sé', level: 95, status: 'Cheio' },
-  { id: 'bin-002', location: 'Jardim do Castelo', level: 60, status: 'Médio' },
-  { id: 'bin-004', location: 'Mercado Municipal', level: 88, status: 'Cheio' },
-];
+import { collectionPoints } from '@/lib/collection-points';
+
+// Use real collection points and select those that need attention (Cheio/Médio)
+const binsOnRoute = collectionPoints.filter(p => p.status === 'Cheio' || p.status === 'Médio').map((p, i) => ({
+  id: `cp-${i + 1}`,
+  location: p.name,
+  coord: p.coord,
+  status: p.status,
+}));
 
 const getStatusColor = (status: string) => {
   switch (status) {
@@ -38,10 +43,12 @@ const getStatusColor = (status: string) => {
 
 export default function OptimizedRoutePage() {
     const [isClient, setIsClient] = useState(false);
+    const searchParams = useSearchParams();
+    const highlight = searchParams?.get ? searchParams.get('highlight') : null;
 
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
+      useEffect(() => {
+          setIsClient(true);
+      }, []);
 
   return (
     <div>
@@ -101,8 +108,8 @@ export default function OptimizedRoutePage() {
           </div>
         </CardHeader>
         <CardContent className="p-0">
-          <div className="aspect-video h-auto min-h-[400px]">
-            {isClient && <WasteBinRouteMap />}
+            <div className="aspect-video h-auto min-h-[400px]">
+            {isClient && <WasteBinRouteMap highlightName={highlight ?? undefined} bins={binsOnRoute} />}
           </div>
         </CardContent>
       </Card>

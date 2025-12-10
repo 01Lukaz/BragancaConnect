@@ -142,24 +142,36 @@ const BusSimulator = () => {
 }
 
 export default function BusMap({ className }: { className?: string }) {
+     const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
     return (
-        <MapContainer
-            center={[41.8061, -6.7569]}
-            zoom={15}
-            scrollWheelZoom={false}
-            className={cn("h-full w-full", className)}
-        >
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <Polyline positions={routePolyline} color="blue" weight={4} opacity={0.8} />
-            {stops.map(stop => (
-                <Marker key={stop.name} position={stop.coord} icon={stopIcon}>
-                    <Tooltip>{stop.name}</Tooltip>
-                </Marker>
-            ))}
-            <BusSimulator />
-        </MapContainer>
+        <>
+            {isClient &&
+                <MapContainer
+                    center={[41.8061, -6.7569]}
+                    zoom={15}
+                    scrollWheelZoom={false}
+                    className={cn("h-full w-full", className)}
+                >
+                    <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                    <Polyline positions={routePolyline} color="blue" weight={4} opacity={0.8} />
+                    {stops.map(stop => (
+                        <Marker key={stop.name} position={stop.coord} icon={stopIcon}>
+                            <Tooltip>{stop.name}</Tooltip>
+                        </Marker>
+                    ))}
+                    <BusSimulator />
+                </MapContainer>
+            }
+        </>
     );
 }
+
+    

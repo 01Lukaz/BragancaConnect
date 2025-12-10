@@ -1,10 +1,39 @@
-import Image from 'next/image';
+
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Icons } from '@/components/icons';
+import { User, Building, Landmark } from 'lucide-react';
+import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-export default function SplashPage() {
+const profiles = [
+  {
+    type: 'Cidadão',
+    description: 'Aceda aos serviços da cidade como residente.',
+    icon: User,
+    href: '/login',
+  },
+  {
+    type: 'Cooperado',
+    description: 'Acesso para parceiros e empresas da rede.',
+    icon: Building,
+    href: '/login',
+  },
+  {
+    type: 'Nordeste',
+    description: 'Explore os dados e serviços da região.',
+    icon: Landmark,
+    href: '/login',
+  },
+];
+
+export default function ProfileSelectionPage() {
   const splashBg = PlaceHolderImages.find((img) => img.id === 'splash-bg');
 
   return (
@@ -19,18 +48,36 @@ export default function SplashPage() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex flex-col items-center text-center text-white">
-        <Icons.logo className="h-24 w-24 mb-4 text-white" />
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-          Smart Bragança
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center text-white">
+        <Icons.logo className="h-20 w-20 mb-4 text-white" />
+        <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+          Bem-vindo à Smart Bragança
         </h1>
-        <p className="mt-4 text-lg md:text-2xl font-light">
-          Tecnologia a favor da cidade
+        <p className="mt-4 text-lg md:text-2xl font-light max-w-2xl">
+          Selecione o seu perfil para aceder à plataforma e descobrir uma cidade
+          mais conectada e sustentável.
         </p>
-        <Button asChild size="lg" className="mt-10 text-lg px-8 py-6">
-          <Link href="/login">Entrar na Plataforma</Link>
-        </Button>
+        <div className="mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+          {profiles.map((profile) => {
+            const ProfileIcon = profile.icon;
+            return (
+              <Link key={profile.type} href={profile.href} className="h-full">
+                <Card className="flex h-full transform-gpu cursor-pointer flex-col items-center justify-center border-2 border-transparent bg-white/10 text-white backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-white/20 hover:scale-105">
+                  <CardHeader className="items-center p-6 pb-4">
+                    <ProfileIcon className="h-14 w-14 text-primary" />
+                  </CardHeader>
+                  <CardContent className="p-6 pt-0 text-center">
+                    <CardTitle className="text-2xl">{profile.type}</CardTitle>
+                    <CardDescription className="mt-2 text-white/80">
+                      {profile.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
+        </div>
       </div>
       <div className="absolute bottom-6 z-10 text-center text-xs text-white/50">
         <p>Um projeto para um futuro mais sustentável e conectado.</p>

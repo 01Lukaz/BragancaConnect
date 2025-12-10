@@ -5,10 +5,7 @@ import {
   Trash2,
   BatteryCharging,
   Leaf,
-  Trees,
   User,
-  Settings,
-  Tv,
 } from 'lucide-react';
 
 export const NAV_ITEMS = [
@@ -18,5 +15,5 @@ export const NAV_ITEMS = [
   { href: '/dashboard/chargers', icon: BatteryCharging, label: 'Carregadores' },
   { href: '/dashboard/composting', icon: Leaf, label: 'Compostagem' },
   { href: '/dashboard/profile', icon: User, label: 'Perfil' },
-  { href: '/dashboard/settings', icon: Settings, label: 'Definições'},
 ];
+

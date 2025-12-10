@@ -45,59 +45,57 @@ export default function WasteBinsPage() {
   return (
     <div>
       <PageTitle title="Contentores de Lixo Inteligentes" />
-      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-[380px_1fr]">
-        <aside className="flex flex-col gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Filtrar por Estado</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Select defaultValue="all">
-                <SelectTrigger className="h-12 text-base">
-                  <SelectValue placeholder="Selecionar estado..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todos</SelectItem>
-                  <SelectItem value="full">Cheios</SelectItem>
-                  <SelectItem value="medium">Médios</SelectItem>
-                  <SelectItem value="empty">Vazios</SelectItem>
-                </SelectContent>
-              </Select>
-            </CardContent>
-          </Card>
-          <Card className="flex-1">
-            <CardHeader>
-              <CardTitle>Estado dos Contentores</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {binData.map((bin) => (
-                 <Button asChild variant="ghost" className="h-auto w-full justify-start p-0" key={bin.id}>
-                    <Link href={`/dashboard/waste-bins/${bin.id}`}>
-                        <div
-                        className="flex items-center justify-between p-3 bg-muted rounded-lg w-full hover:bg-accent/50 transition-colors"
-                        >
-                        <div className="flex items-center gap-3 text-left">
-                            <Trash2 className="h-6 w-6 text-primary" />
-                            <div>
-                            <p className="font-semibold">{bin.location}</p>
-                            <p className="text-xs text-muted-foreground">{bin.type}</p>
-                            </div>
-                        </div>
-                        <div className="text-right flex items-center gap-2">
-                            <Circle
-                                fill={getStatusColor(bin.status)}
-                                className="h-3 w-3"
-                                style={{color: getStatusColor(bin.status)}}
-                            />
-                            <p className="font-bold text-lg">{bin.level}%</p>
-                        </div>
-                        </div>
-                    </Link>
-                </Button>
-              ))}
-            </CardContent>
-          </Card>
-        </aside>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Filtrar por Estado</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Select defaultValue="all">
+              <SelectTrigger className="h-12 text-base">
+                <SelectValue placeholder="Selecionar estado..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Todos</SelectItem>
+                <SelectItem value="full">Cheios</SelectItem>
+                <SelectItem value="medium">Médios</SelectItem>
+                <SelectItem value="empty">Vazios</SelectItem>
+              </SelectContent>
+            </Select>
+          </CardContent>
+        </Card>
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardTitle>Estado dos Contentores</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {binData.map((bin) => (
+               <Button asChild variant="ghost" className="h-auto w-full justify-start p-0" key={bin.id}>
+                  <Link href={`/dashboard/waste-bins/${bin.id}`}>
+                      <div
+                      className="flex items-center justify-between p-3 bg-muted rounded-lg w-full hover:bg-accent/50 transition-colors"
+                      >
+                      <div className="flex items-center gap-3 text-left">
+                          <Trash2 className="h-6 w-6 text-primary" />
+                          <div>
+                          <p className="font-semibold">{bin.location}</p>
+                          <p className="text-xs text-muted-foreground">{bin.type}</p>
+                          </div>
+                      </div>
+                      <div className="text-right flex items-center gap-2">
+                          <Circle
+                              fill={getStatusColor(bin.status)}
+                              className="h-3 w-3"
+                              style={{color: getStatusColor(bin.status)}}
+                          />
+                          <p className="font-bold text-lg">{bin.level}%</p>
+                      </div>
+                      </div>
+                  </Link>
+              </Button>
+            ))}
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

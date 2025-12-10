@@ -101,7 +101,7 @@ export default function OptimizedRoutePage() {
           </div>
         </CardHeader>
         <CardContent className="p-0">
-          <div className="aspect-square md:aspect-video h-auto max-h-[70vh] min-h-[400px]">
+          <div className="aspect-video h-auto">
             {isClient && <WasteBinMap />}
           </div>
         </CardContent>

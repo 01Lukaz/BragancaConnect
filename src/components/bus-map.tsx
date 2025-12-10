@@ -42,7 +42,7 @@ const stops = [
     { nome: "Avenida João da Cruz", lat: 41.807384, lng: -6.758440 }
 ].map(p => ({ name: p.nome, coord: [p.lat, p.lng] as [number, number] }));
 
-const routePolyline = stops.map(s => s.coord);
+const routePolyline: [number, number][] = stops.map(s => s.coord);
 if (routePolyline.length > 0) {
     routePolyline.push(routePolyline[0]); // Close the loop
 }
@@ -77,17 +77,16 @@ function segmentDistanceMeters(a: [number, number], b: [number, number]) {
     return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-const segLens = routePolyline.slice(0, -1).map((p, i) => segmentDistanceMeters(p, routePolyline[i + 1]!));
+const segLens = routePolyline.length > 1 ? routePolyline.slice(0, -1).map((p, i) => segmentDistanceMeters(p, routePolyline[i + 1]!)) : [];
 
 const BusSimulator = () => {
     const map = useMap();
-    const [busPosition, setBusPosition] = useState<[number, number] | null>(null);
+    const [busPosition, setBusPosition] = useState<[number, number] | null>(routePolyline.length > 0 ? routePolyline[0] : null);
     const busState = useRef({ seg: 0, t: 0, speed: 6.11 });
+    const animationFrameId = useRef<number>();
     const lastTime = useRef(performance.now());
     
     useEffect(() => {
-        let animationFrameId: number;
-
         const animate = (now: number) => {
             const dt = (now - lastTime.current) / 1000;
             lastTime.current = now;
@@ -96,9 +95,10 @@ const BusSimulator = () => {
             let advance = state.speed * dt; // meters
 
             while (advance > 0 && segLens.length > 0) {
-                const segLen = segLens[state.seg] || 0;
+                const currentSeg = state.seg % segLens.length;
+                const segLen = segLens[currentSeg] || 0;
                 if (segLen === 0) {
-                    state.seg = (state.seg + 1) % (routePolyline.length - 1);
+                    state.seg = (state.seg + 1) % (routePolyline.length -1);
                     state.t = 0;
                     continue;
                 }
@@ -122,16 +122,20 @@ const BusSimulator = () => {
                  setBusPosition(newPos);
             }
 
-            animationFrameId = requestAnimationFrame(animate);
+            animationFrameId.current = requestAnimationFrame(animate);
         };
 
-        animationFrameId = requestAnimationFrame(animate);
+        animationFrameId.current = requestAnimationFrame(animate);
 
-        return () => cancelAnimationFrame(animationFrameId);
+        return () => {
+            if(animationFrameId.current) {
+                cancelAnimationFrame(animationFrameId.current);
+            }
+        };
     }, []);
 
     useEffect(() => {
-        if(routePolyline.length > 1) {
+        if (routePolyline.length > 1) {
             const bounds = L.latLngBounds(routePolyline);
             map.fitBounds(bounds, { padding: [40, 40] });
         }
@@ -149,29 +153,25 @@ export default function BusMap({ className }: { className?: string }) {
     }, [])
 
     return (
-        <>
-            {isClient &&
-                <MapContainer
-                    center={[41.8061, -6.7569]}
-                    zoom={15}
-                    scrollWheelZoom={false}
-                    className={cn("h-full w-full", className)}
-                >
-                    <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                    <Polyline positions={routePolyline} color="blue" weight={4} opacity={0.8} />
-                    {stops.map(stop => (
-                        <Marker key={stop.name} position={stop.coord} icon={stopIcon}>
-                            <Tooltip>{stop.name}</Tooltip>
-                        </Marker>
-                    ))}
-                    <BusSimulator />
-                </MapContainer>
-            }
-        </>
+        isClient ? (
+            <MapContainer
+                center={[41.8061, -6.7569]}
+                zoom={15}
+                scrollWheelZoom={false}
+                className={cn("h-full w-full", className)}
+            >
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Polyline positions={routePolyline} color="blue" weight={4} opacity={0.8} />
+                {stops.map(stop => (
+                    <Marker key={stop.name} position={stop.coord} icon={stopIcon}>
+                        <Tooltip>{stop.name}</Tooltip>
+                    </Marker>
+                ))}
+                <BusSimulator />
+            </MapContainer>
+        ) : null
     );
 }
-
-    

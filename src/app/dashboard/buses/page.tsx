@@ -7,6 +7,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from '@/components/ui/card';
 import {
   Select,
@@ -111,9 +112,13 @@ export default function BusesPage() {
           </Card>
         </aside>
         <main>
-          <Card className="h-full">
+           <Card className="shadow-lg h-full">
+            <CardHeader>
+                <CardTitle>Mapa em Tempo Real</CardTitle>
+                <CardDescription>Visualização de todas as linhas ativas.</CardDescription>
+            </CardHeader>
             <CardContent className="p-0 h-full">
-                <div className="aspect-video lg:aspect-auto h-full min-h-[400px] lg:min-h-[600px]">
+                <div className="h-full w-full rounded-b-lg bg-muted flex items-center justify-center min-h-[500px] lg:min-h-0">
                     {isClient && <BusMap />}
                 </div>
             </CardContent>
